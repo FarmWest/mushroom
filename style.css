@@ -1,0 +1,301 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ body {
+ /*	background-image: url('../img/bg-body.jpg');
+      position: relative;*/
+  background: #cc6699;
+  }
+
+a:link {
+  color: black;
+  text-decoration: none;
+  margin-top: 15px;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: #d1d1e0;
+  text-decoration: none;
+}
+a:active {
+  color: black;
+  text-decoration: blue;
+}
+
+h1 {
+	text-align: center;
+ 
+}
+
+h2 {
+	text-align: center;
+  
+}
+
+h3 {
+	text-align: center;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #45a049;
+}
+iframe {
+  border-radius: 5px;
+}
+
+
+.grid {
+	display: grid;
+	grid-template-columns: 10px 1fr 1fr 10px;
+	grid-template-areas:
+	". title title ."
+	". contact contact ."
+	". map map ."
+	". sidebar content ."
+	". pricelist pricelist ."
+	". care care ."
+	". care2 care2 ."
+  ". login login ."
+	". footer footer ."
+	;
+	grid-gap: 10px;
+
+}
+
+
+/*Header*/
+.header {
+  display: grid;
+  /*grid-template-columns: 1fr 1fr ;
+  grid-template-areas:
+  "index-language index-logo";*/
+ grid-template-columns: 1fr 1fr 1fr ;
+ grid-template-areas:
+  "index-language index-logo index-menu";
+  grid-gap: 5px;
+ background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.language {
+  grid-area: index-language;
+
+}
+.language a {
+	padding-top: 15px;
+}
+
+.logo {
+  grid-area: index-logo;
+
+}
+.menu {
+  grid-area: index-menu;
+
+}
+
+.dropbtn {
+    background-color: #f2f2f2;
+    color: black;
+    border-radius: 15px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    /*color: black;*/
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+   border-radius: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #bfbfbf;
+}
+
+.title {
+	grid-area:title;
+
+}
+.map {
+	grid-area:map;
+}
+.contact {
+  grid-area:contact;
+	align-self: start;
+	justify-items: center;
+
+}
+
+.sidebar {
+	grid-area:sidebar;
+  
+}
+
+.content {
+	grid-area:content;
+  
+}
+
+.pricelist {
+	grid-area:pricelist;
+  
+}
+
+
+
+.care {
+	grid-area:care;
+
+}
+
+.care2 {
+	grid-area: care2;
+ 
+}
+
+
+
+/*.price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:  
+  ".index-pricelist index-pricelist."
+  ;
+  grid-gap: 15px;
+}
+
+.pricelist {
+  grid-area: index-pricelist;
+}*/
+
+.pricelist table {
+	justify-content: center;
+}
+
+.pricelist table, th, td {
+  border: 1px solid black;
+}
+.pricelist th {
+  text-align: center;
+ /* background-color: #ccc;*/
+}
+.pricelist td {
+ /* background-color: #f1f1f1;*/
+  text-align: center;
+}
+
+.pricelist th td {
+  padding-left: 25px;
+}
+
+/* ####### Members area ##### */
+
+.login {
+  grid-area: login;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+ }
+
+
+
+.footer {
+	grid-area:footer;
+}
+
+
+/*.grid div:nth-child(even){
+	background-color: red;
+
+}
+
+.grid div:nth-child(odd){
+	background-color: green;*/
+
+}
+
+#particles-js {
+  background:  #2eb82e;
+  
+}
+
+@media screen and (min-width: 736px) {
+	.grid {
+	display: grid;
+	grid-template-columns: 1fr 500px 500px 1fr;
+	grid-template-areas:
+	". title title ."
+	". map contact ."
+	". sidebar content ."
+	". pricelist care ."
+	". care2 care ."
+  ". login login ."
+	". footer footer ."
+	;
+
+}
+}
